@@ -4,7 +4,9 @@ app = Flask(__name__)
 
 # Function to convert percentage to CGPA grade points
 def percentage_to_grade_point(percentage):
-    return percentage / 9.5
+   if percentage >= 40:
+      return percentage / 9.5
+   return 0    
 
 # Function to calculate CGPA for the current semester
 def calculate_cgpa(grades, credits):
