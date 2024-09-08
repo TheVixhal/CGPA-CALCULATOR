@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculation Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #292929; /* Black background */
+            color: #e0e0e0; /* Light text color for contrast */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .result-container {
+            background: #02c7ee00; /* Dark gray for the card background */
+            border-radius: 15px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 15px 25px rgba(255, 255, 255, 0.512);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            
+        }
+        .result-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 70%);
+            z-index: 0;
+            transform: rotate(-30deg);
+        }
+        h1 {
+            color: #00bfff; /* Light blue */
+            margin-bottom: 20px;
+            font-size: 2.5rem; /* Responsive font size */
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 1.25rem; /* Responsive font size */
+            color: #e0e0e0;
+            margin: 15px 0;
+        }
+        .result-value {
+            font-size: 2rem; /* Larger font size for the result */
+            font-weight: bold;
+            color: #ff8c00; /* Orange for emphasis */
+            margin-top: 10px;
+        }
+        button {
+            background: linear-gradient(135deg, #ff8c00, #ff4500); /* Orange gradient */
+            margin-top: 10px;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background 0.3s, transform 0.3s;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background: linear-gradient(135deg, #ff4500, #ff8c00); /* Orange gradient on hover */
+            transform: translateY(-3px);
+        }
+        @media (max-width: 600px) {
+            .result-container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem; /* Smaller font size for mobile */
+            }
+            p {
+                font-size: 1rem; /* Smaller font size for mobile */
+            }
+            .result-value {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+            button {
+                font-size: 16px; /* Smaller font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>CGPA Calculation Result</h1>
+        <p>Your overall CGPA is:</p>
+        <div class="result-value">{{ overall_cgpa }}</div>
+        <button onclick="window.location.href='/'">Go Back</button>
+    </div>
+</body>
+</html>
