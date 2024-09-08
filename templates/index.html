@@ -137,9 +137,9 @@
 
             <div id="previous-term" class="section">
                 <label for="previous_cgpa">Enter your previous CGPA:</label>
-                <input type="text" id="previous_cgpa" name="previous_cgpa">
+                <input type="number" id="previous_cgpa" name="previous_cgpa">
                 <label for="previous_credits">Enter your total credits from previous semesters:</label>
-                <input type="text" id="previous_credits" name="previous_credits">
+                <input type="number" id="previous_credits" name="previous_credits">
             </div>
 
             <div class="section">
@@ -179,9 +179,9 @@
                     <div class="section">
                         <h3>Subject ${i}</h3>
                         <label for="percentage_${i}">Enter the percentage grade for subject ${i}:</label>
-                        <input type="text" id="percentage_${i}" name="percentage_${i}" required>
+                        <input type="number" id="percentage_${i}" name="percentage_${i}" required>
                         <label for="credit_${i}">Enter the credit for subject ${i}:</label>
-                        <input type="text" id="credit_${i}" name="credit_${i}" required>
+                        <input type="number" id="credit_${i}" name="credit_${i}" required>
                     </div>
                 `;
             }
