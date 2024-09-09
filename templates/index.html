@@ -124,7 +124,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>CGPA Calculator</h1>
+        <h1>CGPA Calculator by Vixhal</h1>
         <form action="/calculate" method="POST">
             <div class="section">
                 <label for="is_first_term">Is This Your First Semester? (Yes/No):</label>
@@ -137,9 +137,9 @@
 
             <div id="previous-term" class="section">
                 <label for="previous_cgpa">Enter Your Previous CGPA:</label>
-                <input type="number" id="previous_cgpa" name="previous_cgpa" step="0.01">
+                <input type="number" id="previous_cgpa" name="previous_cgpa" step="0.01" max="10" min="1">
                 <label for="previous_credits">Enter Your Total Credits From Previous Semesters:</label>
-                <input type="number" id="previous_credits" name="previous_credits">
+                <input type="number" id="previous_credits" name="previous_credits" min="1">
             </div>
 
             <div class="section">
@@ -179,9 +179,9 @@
                     <div class="section">
                         <h3>Subject ${i}</h3>
                         <label for="percentage_${i}">Enter the percentage grade for subject ${i}:</label>
-                        <input type="number" id="percentage_${i}" name="percentage_${i}" required>
+                        <input type="number" id="percentage_${i}" name="percentage_${i}" max="100" min="1"required>
                         <label for="credit_${i}">Enter the credit for subject ${i}:</label>
-                        <input type="number" id="credit_${i}" name="credit_${i}" required>
+                        <input type="number" id="credit_${i}" name="credit_${i}" min="1" required>
                     </div>
                 `;
             }
